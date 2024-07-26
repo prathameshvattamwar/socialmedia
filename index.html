@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prathamesh V's Social Media</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green" id="notificationCount">3</span></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px" id="notifications">
+                <!-- Notifications will be dynamically populated -->
+            </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+        </a>
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Profile -->
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container">
+                    <h4 class="w3-center">My Profile</h4>
+                    <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                    <hr>
+                    <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> BTech (ENTC)</p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Pune</p>
+                    <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 24/05/2000</p>
+                    <p><i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i> Prathamesh V</p>
+                </div>
+            </div>
+            <br>
+
+            <!-- Accordion -->
+            <div class="w3-card w3-round">
+                <div class="w3-white">
+                    <button onclick="toggleAccordion('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
+                    <div id="Demo1" class="w3-hide w3-container">
+                        <p>Some text..</p>
+                    </div>
+                    <button onclick="toggleAccordion('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
+                    <div id="Demo2" class="w3-hide w3-container">
+                        <p>Some other text..</p>
+                    </div>
+                    <button onclick="toggleAccordion('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+                    <div id="Demo3" class="w3-hide w3-container">
+                        <div class="w3-row-padding">
+                            <br>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <br>
+
+            <!-- Interests --> 
+            <div class="w3-card w3-round w3-white w3-hide-small">
+                <div class="w3-container">
+                    <p>Interests</p>
+                    <div id="interests" class="w3-container">
+                        <!-- Interests will be dynamically populated -->
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!-- Alert Box -->
+            <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+                <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+                    <i class="fa fa-remove"></i>
+                </span>
+                <p><strong>Hey!</strong></p>
+                <p>People are looking at your profile. Find out who.</p>
+            </div>
+
+            <!-- Advertising -->
+            <div class="w3-card w3-round w3-white w3-hide-small">
+                <div class="w3-container">
+                    <p>Advertisement</p>
+                    <iframe src="https://example.com" width="100%" height="200"></iframe>
+                </div>
+            </div>
+
+            <!-- End Left Column -->
+        </div>
+
+        <!-- Middle Column -->
+        <div class="w3-col m7">
+
+            <div class="w3-row-padding">
+                <div class="w3-col m12">
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container w3-padding">
+                            <h6 class="w3-opacity">Social Media template by Prathamesh V</h6>
+                            <div contenteditable="true" class="w3-border w3-padding" id="status">Status: Feeling Blue</div>
+                            <input type="file" id="upload" multiple>
+                            <button type="button" class="w3-button w3-theme" onclick="postStatus()"><i class="fa fa-pencil"></i> Post</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="posts">
+                <!-- Posts will be dynamically populated -->
+            </div>
+
+            <!-- End Middle Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-col m2">
+            <div class="w3-card w3-round w3-white w3-center">
+                <div class="w3-container">
+                    <p>Upcoming Events:</p>
+                    <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
+                    <p><strong>Holiday</strong></p>
+                    <p>Friday 15:00</p>
+                    <p><button class="w3-button w3-block w3-theme-l4" onclick="showEventDetails('Holiday', 'Friday 15:00', 'Description of the event.')">Info</button></p>
+                </div>
+            </div>
+            <br>
+
+            <div class="w3-card w3-round w3-white w3-center">
+                <div class="w3-container">
+                    <p>Friend Request</p>
+                    <div id="friendRequests" class="w3-container">
+                        <!-- Friend requests will be dynamically populated -->
+                    </div>
+                    <div id="friendRequestControls" class="w3-container w3-hide">
+                        <button class="w3-button w3-block w3-theme-l4" onclick="showMoreRequests()">Show More</button>
+                        <button class="w3-button w3-block w3-red" onclick="clearAllRequests()"><i class="fa fa-remove"></i> Clear All</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+                <p>ADS</p>
+            </div>
+            <br>
+
+            <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+                <p><i class="fa fa-bug w3-xxlarge"></i></p>
+            </div>
+
+            <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d5">
+    <p>Copyright © 2024 - Prathamesh V. All Rights Reserved</p>
+</footer>
+
+<!-- Event Popup -->
+<div id="eventPopup" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom w3-card-4">
+        <header class="w3-container w3-theme-d2"> 
+            <span onclick="document.getElementById('eventPopup').style.display='none'" 
+            class="w3-button w3-display-topright">&times;</span>
+            <h2 id="eventTitle"></h2>
+        </header>
+        <div class="w3-container">
+            <p id="eventDateTime"></p>
+            <p id="eventDescription"></p>
+        </div>
+        <footer class="w3-container w3-theme-d2">
+            <p>Event details</p>
+        </footer>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
