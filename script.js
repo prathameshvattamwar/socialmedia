@@ -260,7 +260,7 @@ function checkFriendRequestControls() {
 
 function showMoreRequests() {
     const friendRequestsContainer = document.getElementById("friendRequests");
-    const friendCards = friendRequestsContainer.getElementsByClassName("friend-card");
+    const friendCards = friendRequestsContainer.getElementsByClassName("friend-card"); 
     for (let i = 1; i < friendCards.length; i++) {
         friendCards[i].style.display = "block";
     }
